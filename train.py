@@ -63,7 +63,7 @@ def train(net, train_iter, test_iter, criterion, optimizer, num_epochs):
               % (epoch + 1, train_loss_sum / batch_count, train_acc_sum / n, test_acc_sum / n2, time.time() - start))
 
 
-pretrained_net = models.resnet18(pretrained=True)
+pretrained_net = models.resnetres101(pretrained=True)
 num_ftrs = pretrained_net.fc.in_features
 pretrained_net.fc = nn.Linear(num_ftrs, 3)
 
@@ -75,4 +75,4 @@ optimizer = optim.SGD([{'params': feature_params},
                       lr=lr, weight_decay=0.001)
 
 loss = torch.nn.CrossEntropyLoss()
-train(pretrained_net, train_iter, test_iter, loss, optimizer, num_epochs=5)
+train(pretrained_net, train_iter, test_iter, loss, optimizer, num_epochs=20)
