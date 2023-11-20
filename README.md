@@ -13,3 +13,4 @@ Run svm.py for the SVM model and train.py for CNN model
 Replace "linear" of svm into "poly", "rbf", "sigmoid" can change the kernel of SVM model  
 Replace resnet18 with resnet34, resnet50, resnet101 can change the type of CNN model.  
  
+Report Link: https://docs.google.com/document/d/1nP2LtS8B_fwKz5CmGwGx4Efg9iFhoKAySoL_L5lY4PA/edit?pli=1
